@@ -40,7 +40,7 @@ const DashBoard = () => {
       setMessageToSend(response.choices[0].text);
     //   console.log("Response received:", response.choices[0].text);
     } catch (error) {
-        {console.log(process.env.OPENAI_API_KEY)}
+       
       console.error("Error calling OpenAI API:", error);
     }
   };

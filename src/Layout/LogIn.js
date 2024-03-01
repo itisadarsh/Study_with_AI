@@ -1,5 +1,5 @@
 import studylogo from "../Images/studylogo.jpeg";
-import gridnet from "../Images/grid-net.png";
+// import gridnet from "../Images/grid-net.png";
 import React from "react";
 import Image from "./Images";
 import Section from "./Section";
