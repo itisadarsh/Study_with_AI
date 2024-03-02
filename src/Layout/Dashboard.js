@@ -20,10 +20,9 @@ const DashBoard = () => {
     try {
       const openai = new OpenAI({
         // apiKey: process.env.OPENAI_API_KEY,
-        // apiKey:"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",
-        REACT_OPENAI_API_KEY:process.env.OPENAI_API_KEY,
-      
-        // dangerouslyAllowBrowser: true,
+       
+              REACT_OPENAI_API_KEY:process.env.OPENAI_API_KEY,
+              // dangerouslyAllowBrowser: true,
       });
 
       const response = await openai.completions.create({
@@ -40,7 +39,7 @@ const DashBoard = () => {
       setMessageToSend(response.choices[0].text);
     //   console.log("Response received:", response.choices[0].text);
     } catch (error) {
-       
+      console.log(process.env.REACT_OPENAI_API_KEY)
       console.error("Error calling OpenAI API:", error);
     }
   };
