@@ -20,10 +20,10 @@ const DashBoard = () => {
     try {
       const openai = new OpenAI({
         // apiKey: process.env.OPENAI_API_KEY,
-        apiKey:"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",
-        // apiKey:process.env.OPENAI_API_KEY,
+        // apiKey:"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",
+        REACT_OPENAI_API_KEY:process.env.OPENAI_API_KEY,
       
-        dangerouslyAllowBrowser: true,
+        // dangerouslyAllowBrowser: true,
       });
 
       const response = await openai.completions.create({
