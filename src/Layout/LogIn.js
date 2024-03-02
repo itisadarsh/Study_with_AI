@@ -83,11 +83,11 @@ const LogIn = (props) => {
 
         <div className="flex items-center">
                     <div className="ouline w-[47%] h-[1px] opacity-40 bg-white"></div>
-                    <p>OR</p>
+                    <div>OR</div>
                     <div className="ouline w-[47%] opacity-40 border"></div>
                 </div>
 
-                <button className="flex justify-evenly items-center bg-green-500 rounded-md py-1"><FcGoogle/><p>Sign Up With Google</p></button>
+                <button className="flex justify-evenly items-center bg-green-500 rounded-md py-1"><FcGoogle/>Sign Up With Google</button>
         
             </div>
 

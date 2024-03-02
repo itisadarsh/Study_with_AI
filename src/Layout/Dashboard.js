@@ -19,12 +19,10 @@ const DashBoard = () => {
     event.preventDefault();
     try {
       const openai = new OpenAI({
-        // apiKey: process.env.OPENAI_API_KEY,
-       
-              REACT_OPENAI_API_KEY:process.env.OPENAI_API_KEY,
-              // dangerouslyAllowBrowser: true,
+        apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+        dangerouslyAllowBrowser: true,
       });
-
+      
       const response = await openai.completions.create({
         model: "gpt-3.5-turbo-instruct",
         prompt: formData.input,
@@ -34,13 +32,11 @@ const DashBoard = () => {
         frequency_penalty: 0,
         presence_penalty: 0,
       });
-    //   console.log(response);
-    
+
       setMessageToSend(response.choices[0].text);
-    //   console.log("Response received:", response.choices[0].text);
-    } catch (error) {
-      console.log(process.env.REACT_OPENAI_API_KEY)
-      console.error("Error calling OpenAI API:", error);
+    }
+    catch (error) {
+           console.error("Error calling OpenAI API:", error);
     }
   };
 
