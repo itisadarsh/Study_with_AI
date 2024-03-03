@@ -15,10 +15,10 @@ code {
 @tailwind components;
 @tailwind utilities;
 
-.App, .login , .signup{
+/* .App, .login , .signup{
   max-height: max-content;
   max-width:max-content
-}
+} */
 
 .main{
   /* height:calc(500px - 50px); */
@@ -88,15 +88,16 @@ label{
   }
 
 }
-/* 
+
 @media (max-width:300px){
 
-  .signup,.login,.App,.sign-section{
+  .signup,.login{
    
-    min-height: max-content;
+    height:max-content;
+    width:max-content;
   }
 
   .sign-section{
     top:0%;
   }
-} */
+}
