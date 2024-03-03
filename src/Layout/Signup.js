@@ -4,17 +4,17 @@ import studylogo from "../Images/studylogo.jpeg";
 import React, { useState } from "react";
 import Student from "./Student";
 import Instructor from "./Instructor";
-
+import gridnet from "../Images/Grid-Line.png";
 
 const Signup=(props)=>{
 
     const[isStudent,setStudent]=useState(true);
 
     return(
-        <div className="mt-4 login flex w-full ">
+        <div className="mt-4 flex relative w-full justify-between ">
 
-        <div className=" mx-[20vw] flex justify-around relative">
-            <div className="sign-section flex flex-col w-[40%] text-left gap-3">
+        <div className=" mx-[20vw] signup flex justify-between relative">
+            <div className="sign-section relative flex flex-col w-[40%] text-left gap-3">
                
                 <Section heading={"Join the millions learning to code for study-app for free"} subhead1={"Build Skills for today, tommorrow and beyond"} subhead2={"Education to future proof your carrer"} />
 
@@ -35,7 +35,7 @@ const Signup=(props)=>{
 
       
         <div className="img-section w-[40%] min-h-* relative">
-        <Image Image1={studylogo} Image2={studylogo} />
+        <Image Image1={gridnet} Image2={studylogo} />
         </div>
         </div>
     </div>

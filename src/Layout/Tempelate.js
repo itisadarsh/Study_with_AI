@@ -62,23 +62,37 @@ const Template = (props) => {
 
             <div className="flex gap-1 flex-wrap">
                 <div className="flex flex-col gap-1">
-                    <label htmlFor="pass">Create Password
-                    <input type={passvisible?"text":"password"} className="bg-transparent rounded-md" placeholder="Create Password" name="password" onChange={changeHandler} value={formData.password} />
+                <label htmlFor="password" className="relative  w-full">
 
-                    <span onClick={()=>{ setpassVisible((prev)=>!prev)}}>
-                        {passvisible?<AiOutlineEye/>: <AiOutlineEyeInvisible/>}
-                    </span>
+<p className="text-[0.875rem] w-full mb-1">Create Password<sup>*</sup></p>
+     <input type={passvisible?"type":"password"} 
+        required name="password"
+        onChange={changeHandler}
+        value={formData.password}
+        className="text-white text-sm p-1 bg-transparent rounded-md  w-full"
+        placeholder="Enter password" />
 
-                    </label>
+        <span  className="absolute right-3 top-6" onClick={()=>{ setpassVisible((prev)=>!prev)}}>
+        {passvisible?<AiOutlineEye fontSize={24} fill="#AFB2BF"/>: <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF"/>}
+        </span>
+        </label>
                 </div>
 
                 <div className=" flex flex-col gap-1">
-                    <label htmlFor="confPass">Confirm Password
-                    <input type={confvisible?"text":"password"} className="bg-transparent rounded-md" placeholder="Confirm Password" name="confpass" onChange={changeHandler} value={formData.confpass}/>
-                    <span onClick={()=>{ setconfVisible((prev)=>!prev)}}>
-                        {confvisible?<AiOutlineEye/>: <AiOutlineEyeInvisible/>}
-                    </span>
-                    </label>
+                <label htmlFor="confpass" className="relative  w-full">
+
+<p className="text-[0.875rem] w-full mb-1">Confirm Password<sup>*</sup></p>
+    <input type={confvisible?"type":"password"} 
+        required name="confpass"
+        onChange={changeHandler}
+        value={formData.confpass}
+        className="text-white text-sm p-1 bg-transparent rounded-md  w-full "
+        placeholder="Confirm password" />
+
+        <span  className="absolute right-3 top-6" onClick={()=>{ setconfVisible((prev)=>!prev)}}>
+        {confvisible?<AiOutlineEye fontSize={24} fill="#AFB2BF"/>: <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF"/>}
+        </span>
+        </label>
                 </div>
 
             </div>

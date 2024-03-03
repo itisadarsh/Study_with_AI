@@ -21,14 +21,9 @@ function App() {
     const[isLoggedIn,setLoggedIn]=useState(false);
     
   return (
-
-    
-
     <div className="App relative bg-black text-white min-h-screen max-h-* flex flex-col">
 
-{
-      console.log(isLoggedIn)
-    }
+
   <nav className=' flex justify-evenly items-center'>
 
     <div className=''> 
@@ -68,18 +63,7 @@ function App() {
 
 
       </Route>
-    </Routes>
-
-
-
-
-
-
-
-
-
-
-      
+    </Routes>      
     </div>
   );
 }

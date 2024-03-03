@@ -15,8 +15,9 @@ code {
 @tailwind components;
 @tailwind utilities;
 
-.App{
+.App, .login , .signup{
   max-height: max-content;
+  max-width:max-content
 }
 
 .main{
@@ -30,8 +31,72 @@ label{
 
 }
 
-.img-section{
-  /* background-image:url(D:\WebDev_DOT\React_2\studyapp\src\Images\grid-net.png); */
-  
+
+
+@media(max-width:1024px ) {
+  .signup{
+    top:10px;
+    margin-inline: 5%;
+    height: 58%;
+    
+  }
+  .login{
+    margin-inline: 10%;
+  }
+}
+@media(max-width:1024px) and (min-width: 800px ) {
+  .signup,.login{
+ 
+    top:190px;
+    margin-inline: 5%;
+    height: 60%;
+    
+  }
+  .login{
+    margin-inline: 10%;
+  }
 
 }
+
+@media(max-width:500px){
+
+  .signup{
+  
+   width:90vw;
+    flex-direction: column-reverse;
+    align-items: center;
+  /* margin-top:0; */
+  
+    
+  }
+  .login{
+    /* width:90vw; */
+    /* flex-direction: column-reverse; */
+    height:max-content;
+    width:max-content;
+  }
+
+  .img-section{
+    height:55%;
+    width:80vw;
+    /* top:3%;
+    left:3%; */
+  }
+  .sign-section{
+    width:70vw;
+    top:-9%;
+  }
+
+}
+/* 
+@media (max-width:300px){
+
+  .signup,.login,.App,.sign-section{
+   
+    min-height: max-content;
+  }
+
+  .sign-section{
+    top:0%;
+  }
+} */

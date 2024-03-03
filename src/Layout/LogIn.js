@@ -1,5 +1,5 @@
 import studylogo from "../Images/studylogo.jpeg";
-// import gridnet from "../Images/grid-net.png";
+import gridnet from "../Images/Grid-Line.png";
 import React from "react";
 import Image from "./Images";
 import Section from "./Section";
@@ -39,9 +39,9 @@ const LogIn = (props) => {
     }
 
 
-    return (<div className="mt-4 login flex w-full ">
+    return (<div className="mt-4  flex w-full ">
 
-        <div className=" mx-[20vw] flex justify-around relative">
+        <div className=" mx-[20vw] login flex justify-between relative flex-wrap gap-10">
          
          
             <div className="sign-section flex flex-col w-[40%] text-left gap-3">
@@ -49,9 +49,9 @@ const LogIn = (props) => {
         
         <form action="" className="flex flex-col gap-2" onSubmit={submitHandler}>
         <div className="email-wrap flex flex-col gap-1">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email<sup>*</sup></label>
         <input type="email" required 
-        className="bg-transparent rounded-md" 
+        className="bg-transparent rounded-md text-sm p-1" 
         placeholder="Enter Email address" 
         name="email"
         onChange={changeHandler}
@@ -61,19 +61,22 @@ const LogIn = (props) => {
         </div>
 
         <div className="pass-wrap  flex flex-col">
-        <label htmlFor="password">
-        Password<sup>*</sup>
+        <label htmlFor="password" className="relative  w-full">
+
+         <p className="text-[0.875rem] w-full mb-1">Password<sup>*</sup></p>
        
         <input type={visible?"type":"password"} 
-        required name="password" 
+        required name="password"
         onChange={changeHandler}
         value={formData.password}
-        className="text-white bg-transparent rounded-md outline-none hover:border-2 "
+        className="text-white text-sm p-1 bg-transparent rounded-md  w-full"
         placeholder="Enter password" />
 
-        <span onClick={()=>{ setVisible((prev)=>!prev)}}>
-        {visible?<AiOutlineEye/>: <AiOutlineEyeInvisible/>}
+        <span  className="absolute right-3 top-6" onClick={()=>{ setVisible((prev)=>!prev)}}>
+        {visible?<AiOutlineEye fontSize={24} fill="#AFB2BF"/>: <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF"/>}
         </span>
+
+
        </label>
         <p className=" self-end text-xs text-cyan-400">Forgot Password</p>
         </div>
@@ -93,7 +96,7 @@ const LogIn = (props) => {
 
        
         <div className="img-section w-[40%] min-h-* relative">
-        <Image Image1={studylogo} Image2={studylogo} />
+        <Image Image1={gridnet} Image2={studylogo} />
         </div>
         </div>
     </div>
